@@ -58,6 +58,7 @@ def draw_figure(canvas, figure):
 def DESone():
     """
     All of the DES screens / functions are the same the graph will be changed in later versions.
+    All buttons except for chat, DES screens and Logout are non functional in this prototype.
     
     The first line of the function sets the theme of the GUI to dark mode.
     
