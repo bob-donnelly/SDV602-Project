@@ -63,6 +63,9 @@ def DESone():
     
     Layouts populate the window with buttons, chat windows or even canvas elements with columns pushing elements into place.
     
+    Chat window is functional can output text input, the first output is intended to grab login information i.e., 
+    member names to know who is online and is non functional.
+    
     Window creates a window with a title from the layout, a resizeable window and size of the it defaults to which we finalise.
     
     Window maximise starts the window maximised to the screen. 
@@ -77,7 +80,7 @@ def DESone():
     
     NOTE 
     
-    Currently you can only navigate in a line i.e., Des One -> Des two -> Des Three as columns throw an error if you try to
+    Currently you can only navigate in a line i.e., DES One -> DES Two -> DES Three as columns throw an error if you try to
     load the same screen you are on or try to move back to a screen previously visited in the session but you can navigate
     between all screens once. Later version will fix this.
     
@@ -193,7 +196,7 @@ def DESthree():
 
 def main():
     """
-    The main function runs DESone() to start the windows running but as DES screens call each other it is unnecessary to call again.
+    The main function runs DESone() to start the windows running but as DEES functions call each other it is unnecessary to call again.
     """
     DESone()
 
