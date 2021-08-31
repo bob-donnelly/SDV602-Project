@@ -1,9 +1,10 @@
+# Importing necessary modules to run the GUI and charts.
+# Number Py, matpilotlib, Tkinter functions in Pysimplegui etc 
+
 import PySimpleGUI as sg
-import matplotlib.pyplot as plt
+import matplotlib.pyplot
 import numpy as np
 from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg
-import PySimpleGUI as sg
-import matplotlib
 matplotlib.use('TkAgg')
 
 
