@@ -1,3 +1,11 @@
+"""
+Help docstring encapsulates the entire purpose of this file.
+
+THis module is to create three data explerer screens.
+
+with a chat system
+"""
+ 
 # Importing necessary modules to run the GUI and charts.
 # Number Py, matpilotlib, Tkinter functions in Pysimplegui etc 
 
