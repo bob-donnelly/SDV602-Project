@@ -34,28 +34,28 @@ def draw_figure(canvas, figure):
 class desScreen(object):
     def makeColumns(self):
         sz=(50,20)
-        self.col1=[[sg.Text(size=sz)]]
-        self.col2=[[sg.Text(size=(175, 0))]]
-        self.col3=[[sg.Text(size=(90 , 0))]]
-        self.col4=[[sg.Text(size=(175, 0))]]
-        self.col5=[[sg.Text(size=(175, 0))]]
-        self.col6=[[sg.Text(size=(177, 0))]]
-        self.col7=[[sg.Text(size=(70 , 0))]]
+        # self.col1=[[sg.Text(size=sz)]]
+        # self.col2=[[sg.Text(size=(175, 0))]]
+        # self.col3=[[sg.Text(size=(90 , 0))]]
+        # self.col4=[[sg.Text(size=(175, 0))]]
+        # self.col5=[[sg.Text(size=(175, 0))]]
+        # self.col6=[[sg.Text(size=(177, 0))]]
+        # self.col7=[[sg.Text(size=(70 , 0))]]
 
-        self.col8=[[sg.Text(size=sz)]]
-        self.col9=[[sg.Text(size=(175, 0))]]
-        self.col10=[[sg.Text(size=(90 , 0))]]
-        self.col11=[[sg.Text(size=(175, 0))]]
-        self.col12=[[sg.Text(size=(175, 0))]]
-        self.col13=[[sg.Text(size=(177, 0))]]
-        self.col14=[[sg.Text(size=(70 , 0))]]
+        # self.col8=[[sg.Text(size=sz)]]
+        # self.col9=[[sg.Text(size=(175, 0))]]
+        # self.col10=[[sg.Text(size=(90 , 0))]]
+        # self.col11=[[sg.Text(size=(175, 0))]]
+        # self.col12=[[sg.Text(size=(175, 0))]]
+        # self.col13=[[sg.Text(size=(177, 0))]]
+        # self.col14=[[sg.Text(size=(70 , 0))]]
 
         self.col15=[[sg.Text(size=sz)]]
         self.col16=[[sg.Text(size=(175, 0))]]
         self.col17=[[sg.Text(size=(90 , 0))]]
         self.col18=[[sg.Text(size=(175, 0))]]
         self.col19=[[sg.Text(size=(175, 0))]]
-        self.col20=[[sg.Text(size=(177, 0))]]
+        self.col20=[[sg.Text(size=(175, 0))]]
         self.col21=[[sg.Text(size=(70 , 0))]]
         
     def display(self):
@@ -72,9 +72,9 @@ class desScreen(object):
         
         layout = [  [sg.Column(self.col15), sg.Canvas(key='-CANVAS-')],
                     [sg.Column(self.col17), sg.Button('Pan'), sg.Button('Zoom In'), sg.Button('Zoom Out')],
-                    [sg.Column(self.col16), sg.Output(size=(5, 5))],           
-                    [sg.Column(self.col18), sg.Output(size=(5, 5))],
-                    [sg.Column(self.col19), sg.Multiline(size=(5, 5), enter_submits=True)], 
+                    [sg.Column(self.col16), sg.Output(size=(10, 5))],           
+                    [sg.Column(self.col18), sg.Output(size=(10, 5))],
+                    [sg.Column(self.col19), sg.Multiline(size=(10, 5), enter_submits=True)], 
                     [sg.Column(self.col20), sg.Button('Chat')],
                     [sg.Button('Use Data'), sg.Button('Upload Data')],
                     [sg.Column(self.col21), sg.Button('DES One'), sg.Button('DES Two'), sg.Button('DES Three'), sg.Button('Logout')] ]
