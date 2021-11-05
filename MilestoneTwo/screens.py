@@ -14,12 +14,13 @@ import matplotlib.pyplot
 import numpy as np
 from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg
 matplotlib.use('TkAgg')
-
+import read as rd
 # Variables for filling the graph with mock data.
 
-fig = matplotlib.figure.Figure(figsize=(5, 4), dpi=100)
-t = np.arange(0, 3, .01)
-fig.add_subplot(111).plot(t, 2 * np.sin(2 * np.pi * t))
+fig = matplotlib.figure.Figure(figsize=(10, 4), dpi=100)
+# t = np.arange(2, 3, 0.5)
+timber = rd.returnValues()
+fig.add_subplot().plot(timber.Year[1:2000], timber["Export Quantity"][1:2000])
 
 def draw_figure(canvas, figure):
     """
@@ -107,9 +108,8 @@ DESthree = desScreen()
 
 def main():
     """
-    The main function runs DESone() to start the windows running but as DEES functions call each other it is unnecessary to call again.
+    The main function runs global variable DESone to start the windows running but as DEES functions call each other it is unnecessary to call again.
     """
-    # DESone()
     global DESone
 
     DESone.display()
@@ -118,3 +118,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+    
