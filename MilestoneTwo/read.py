@@ -9,4 +9,3 @@ def returnValues():
     timber = pd.read_json('timber.json', orient='index')
 
     return timber
-

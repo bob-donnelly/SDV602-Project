@@ -7,20 +7,18 @@ with a chat system
 """
 
 # Importing necessary modules to run the GUI and charts.
-# Number Py, matpilotlib, Tkinter functions in Pysimplegui etc
+# matpilotlib, Tkinter functions in Pysimplegui etc
 
 import PySimpleGUI as sg
 import matplotlib.pyplot
-import numpy as np
 from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg
 matplotlib.use('TkAgg')
 import read as rd
-# Variables for filling the graph with mock data.
+# Variables for filling the graph with data.
 
 fig = matplotlib.figure.Figure(figsize=(10, 4), dpi=100)
-# t = np.arange(2, 3, 0.5)
 timber = rd.returnValues()
-fig.add_subplot().plot(timber.Year[1:2000], timber["Export Quantity"][1:2000])
+fig.add_subplot().plot(timber.Year, timber["Export Quantity"])
 
 def draw_figure(canvas, figure):
     """
@@ -34,7 +32,7 @@ def draw_figure(canvas, figure):
 
 class desScreen(object):
     def makeColumns(self):
-        sz=(50,20)
+        sz=(20,20)
         # self.col1=[[sg.Text(size=sz)]]
         # self.col2=[[sg.Text(size=(175, 0))]]
         # self.col3=[[sg.Text(size=(90 , 0))]]
