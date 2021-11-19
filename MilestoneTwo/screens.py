@@ -1,9 +1,9 @@
 """
-Help docstring encapsulates the entire purpose of this file.
-
 This module is to create three data explerer screens.
 
-with a chat system
+Also inports the canvas and data manipulation modules to display on the screens.
+
+Has a a chat system
 """
 
 # Importing necessary modules to run the GUI and charts.
@@ -16,9 +16,9 @@ matplotlib.use('TkAgg')
 import read as rd
 import canvas as can
 
-# Variables for filling the graph with data.
+# Variables for filling the graph with data impoted from read.
 
-fig = matplotlib.figure.Figure(figsize=(10, 4), dpi=100)
+fig = matplotlib.figure.Figure(figsize=(10, 3), dpi=100)
 timber = rd.returnValues()
 fig.add_subplot().plot(timber.Year, timber["Export Quantity"])
 # fig_canvas_graph = can.draw_figure_w_toolbar()
@@ -47,12 +47,11 @@ class desScreen(object):
         self.makeColumns()
         
         layout = [  [sg.Column(self.col15), sg.Canvas(key='-CANVAS-')],
-                    # [sg.Column(self.col17), sg.Button('Pan'), sg.Button('Zoom In'), sg.Button('Zoom Out')],
                     [sg.Column(self.col16), sg.Output(size=(10, 5))],           
                     [sg.Column(self.col18), sg.Output(size=(10, 5))],
                     [sg.Column(self.col19), sg.Multiline(size=(10, 5), enter_submits=True)], 
                     [sg.Column(self.col20), sg.Button('Chat')],
-                    [sg.Button('Use Data'), sg.Button('Upload Data')],
+                    [[sg.FileBrowse(file_types=(("JSON Files", "*.json"), ))], sg.Button('Upload Data')],
                     [sg.Column(self.col21), sg.Button('DES One'), sg.Button('DES Two'), sg.Button('DES Three'), sg.Button('Logout')] ]
         
         

@@ -1,3 +1,6 @@
+"""
+Canvas modules purpose is to create a canvas and tool bar to insert into the GUI that is on screens.
+"""
 import matplotlib.pyplot
 from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg, NavigationToolbar2Tk
 matplotlib.use('TkAgg')
